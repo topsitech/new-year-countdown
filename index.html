@@ -9,6 +9,14 @@
       background: black;
       color: white;
     }
+    .main{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-size:4vw;
+      text-align:center;
+    }
     p#demo {
       text-align: center;
       font-size: 14vw;
@@ -22,11 +30,6 @@
       margin: auto 0;
       background-color: green;
       color:#FFF;
-    }
-    .main{
-      font-size:4vw;
-      text-align:center;
-      margin-top: 3vw;
     }
     .left, .right{
         width: 35vw;
@@ -52,10 +55,11 @@
       text-align: center;
     }
 </style>
-<title>Count Down to New Year</title>
+<title>Count Down to Next Year</title>
 </head>
 <body>
 <div class="main">
+    <div style="width:100%">
     Current Time in <span id="tmonth"></span> <span id="tday"></span> <strong id="tyear"></strong>
     <p id="time"></p>
     <p id="current" style="display:none"></p>
@@ -64,6 +68,7 @@
     <img src="tree_animated.gif" alt="" class="left">
     <img src="tree_animated.gif" alt="" class="right">
     <div class="credit"><b>Desinged by:</b> Ajayi Temitope (Topsite) - 0808-946-9906</div>
+  </div>
 </div>
 <script>
 // Set the date we're counting down to
