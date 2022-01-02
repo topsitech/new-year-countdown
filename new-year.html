@@ -4,74 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congratulations - Happ New Year - Topsite</title>
-    <style>
-        #nyear{
-            position: fixed;
-            bottom: 2vw;
-            left: 50%;
-            margin-left: -25vw;
-            font-size: 25vw;
-            font-weight: 800;
-            text-shadow: .2vw .2vw .2vw black;
-        }
-        #current{
-            position: fixed;
-            bottom: 3vw;
-            left: 50%;
-            width: 48vw;
-            background-color: yellow;
-            color:black;
-            margin-left: -24vw;
-            font-size: 2.5vw;
-            border-radius: 2vw;
-            padding: .5vw;
-        }
-        #time{
-            background: red;
-            padding: 1vw;
-            border-radius: 1vw;
-            color: white;
-        }
-        .cong{
-            font-size:6vw; 
-            font-weight:bold;
-            position: fixed;
-            top: 1vw;
-            left: 50%;
-            width: 50vw;
-            margin-left: -25vw;
-
-        }
-        .hny{
-            margin-top: 5vw;
-            width: 50vw;
-            border-bottom-right-radius: 50%;
-            border-bottom-left-radius: 50%;
-        }
-        .left, .right{
-            width: 35vw;
-            position: fixed;
-            bottom: -5vw;
-        }
-        .left{
-            left: -17vw;
-        }
-        .right{
-            right: -17vw;
-        }
-    .credit{
-      position: fixed;
-      bottom: 1vw;
-      left: 0;
-      width: 100%;
-      color: white;
-      font-size: 1vw;
-      text-align: center;
-    }
-    </style>
+    <title>Congratulations - Happ New Year - by Ajayi Temitope (Topsite)</title>
+    <link rel="stylesheet" href="new-year.css">
 </head>
-<body style="background:#000; color:#FFF">
+<body>
     <div style="text-align: center;">
         <div class="cong">Congratulations!!!</div><br>
         <marquee  behavior="alternate"><img class="hny" src="hny.gif"></marquee>
@@ -84,58 +20,4 @@
 </body>
 </html>
 
-<script>
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-    ];
-    const dat = new Date();
-    document.getElementById("tmonth").innerHTML = monthNames[dat.getMonth()];
-    document.getElementById("tday").innerHTML = dat.getDate();
-    var this_year = new Date().getFullYear();
-    //alert(next_year);
-    document.getElementById("nyear").innerHTML = this_year;
-
-    function checkTime(i) {
-        if (i < 10) {
-            i = "0" + i;
-        }
-        return i;
-    }
-    function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    // add a zero in front of numbers<10
-    m = checkTime(m);
-    s = checkTime(s);
-    if(h==12){
-        var a = "PM";
-    }
-    else if(h==0){
-        h = 12;
-        var a = "AM";
-    }
-    else if(h>12){
-        h = h - 12;
-        var a = "PM";
-    }
-    else var a = "AM";
-    document.getElementById('time').innerHTML = h + ":" + m + ":" + s + " " + a;
-    t = setTimeout(function() {
-        startTime()
-    }, 500);
-    }
-
-    startTime();
-
-    setTimeout(function ()
-    {
-        if (self.name != '_refreshed_'){
-        self.name = '_refreshed_';
-        self.location.reload(true);
-        } else {
-            self.name = ''; 
-        }
-    }, 500);
-</script>
+<script src="new-year.js"></script>
